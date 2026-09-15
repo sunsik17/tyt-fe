@@ -8,6 +8,7 @@ CLAUDE.md
 ## Project: tyt-fe
 - 기술 스택 미정. 정해지면 이 절에 적는다.
 - 서버 저장소는 `tyt-be` (형제 디렉터리 `../tyt-be`).
+- 서버 API는 `../tyt-be/docs/openapi.yaml`(엔드포인트별 스펙)과 `../tyt-be/docs/api-guide.md`(흐름·공통 규칙)를 본다. 복사해오지 않는다.
 - 규칙:
   - `.claude/rules/git-workflow.md` (항상 로드. issue → 브랜치 → PR → merge)
   - `.claude/rules/api.md` (서버 API 연동 작업 시 로드)
