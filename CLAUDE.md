@@ -6,10 +6,10 @@ CLAUDE.md
 - 기획 상세는 `tyt-be` 저장소의 `docs/product.md`. 로컬에서는 `../tyt-be/docs/product.md`. **복사해오지 않는다.** 기획은 원본 하나만 두고, 바뀌면 그쪽을 고친다.
 
 ## Project: tyt-fe
-- 기술 스택: **Flutter (Dart)**. 프로젝트는 아직 만들지 않았다.
+- 기술 스택: **Flutter (Dart)**.
   - 고른 이유: 카카오가 공식 Flutter SDK를 제공한다. golden test로 상태별 화면을 고정할 수 있다. BE가 Java라 Dart 학습 부담이 적다.
   - 개발과 Android 확인은 Windows에서, iOS 빌드·실행과 iOS 위젯 작업은 Mac에서 한다.
-  - 번들 ID·패키지명은 미정. 카카오 콘솔에 등록할 값이라 프로젝트를 만들 때 함께 정한다.
+  - 패키지명·번들 ID: `com.sunsik17.tyt`. 카카오 콘솔에 등록하는 값이다.
 - 서버 저장소는 `tyt-be` (형제 디렉터리 `../tyt-be`).
 - 서버 API는 `../tyt-be/docs/openapi.yaml`(엔드포인트별 스펙)과 `../tyt-be/docs/api-guide.md`(흐름·공통 규칙)를 본다. 복사해오지 않는다.
 - 디자인(컬러·타이포·화면 원칙)은 `docs/design.md`. 아직 초안이다.
