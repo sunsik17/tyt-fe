@@ -4,4 +4,6 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 로컬 서버는 HTTP다. 개발 빌드에서만 허용하고 배포 빌드에는 넣지 않는다 (api-guide.md) -->
+    <application android:usesCleartextTraffic="true"/>
 </manifest>

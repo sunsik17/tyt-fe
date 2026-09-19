@@ -71,3 +71,7 @@ app.*.map.json
 # 로컬 환경 변수 (서버 주소, 카카오 키 등)
 .env
 .env*.local
+
+# 로컬 설정. 값이 빈 env/example.json만 저장소에 둔다
+/env/*
+!/env/example.json

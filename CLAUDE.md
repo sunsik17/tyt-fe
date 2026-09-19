@@ -10,6 +10,7 @@ CLAUDE.md
   - 고른 이유: 카카오가 공식 Flutter SDK를 제공한다. golden test로 상태별 화면을 고정할 수 있다. BE가 Java라 Dart 학습 부담이 적다.
   - 개발과 Android 확인은 Windows에서, iOS 빌드·실행과 iOS 위젯 작업은 Mac에서 한다.
   - 패키지명·번들 ID: `com.sunsik17.tyt`. 카카오 콘솔에 등록하는 값이다.
+- 실행: `env/example.json`을 `env/dev.json`으로 복사해 서버 주소와 카카오 네이티브 앱 키를 채우고 `flutter run --dart-define-from-file=env/dev.json`. `env/dev.json`은 git에 올리지 않는다.
 - 서버 저장소는 `tyt-be` (형제 디렉터리 `../tyt-be`).
 - 서버 API는 `../tyt-be/docs/openapi.yaml`(엔드포인트별 스펙)과 `../tyt-be/docs/api-guide.md`(흐름·공통 규칙)를 본다. 복사해오지 않는다.
 - 디자인(컬러·타이포·화면 원칙)은 `docs/design.md`. 아직 초안이다.
