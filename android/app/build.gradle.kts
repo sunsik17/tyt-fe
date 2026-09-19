@@ -4,6 +4,15 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// 카카오 네이티브 앱 키는 git에 올리지 않는 env/dev.json에서 읽는다.
+// 앱의 --dart-define-from-file과 같은 파일이라 값이 한 곳에만 있다.
+val kakaoNativeAppKey: String = rootProject.file("../env/dev.json").let { file ->
+    if (!file.exists()) return@let ""
+    @Suppress("UNCHECKED_CAST")
+    val env = groovy.json.JsonSlurper().parse(file) as Map<String, Any?>
+    env["KAKAO_NATIVE_APP_KEY"] as String? ?: ""
+}
+
 android {
     namespace = "com.sunsik17.tyt"
     compileSdk = flutter.compileSdkVersion
@@ -27,6 +36,7 @@ android {
         // flag during build.
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        manifestPlaceholders["kakaoNativeAppKey"] = kakaoNativeAppKey
     }
 
     buildTypes {
